@@ -19,13 +19,11 @@ Use must first create a JSON parser configuration and place it under the `scrape
 ```python
 # import libraries
 from jscrapeon_parser.parse import JScrapeONParser
-from jscrapeon_parser.connection import JScrapeONRequest
 from jscrapeon_parser.config_parser import JsonConfig
 
 # initialized the configuration with the name of the JSON Config file
 json_config = JsonConfig(file_name="webscraper-e-commerce.json")
-parser = JScrapeONParser(scrape_config=json_config)
-parser.parse()
+parser = JScrapeONParser(scrape_config=json_config).parse()
 print(parser.stored_values)
 ```
 

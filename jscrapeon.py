@@ -1,7 +1,3 @@
-from jscrapeon_parser.config_parser import Config
-from abc import ABC, abstractmethod
-from dataclasses import dataclass
-from typing import List, Dict, Tuple, Optional
 from jscrapeon_parser.parse import JScrapeONParser
 from jscrapeon_parser.connection import JScrapeONRequest
 from jscrapeon_parser.config_parser import JsonConfig

@@ -18,7 +18,7 @@ import json
 class Config(ABC):
 
     config: Dict = field(default_factory=dict)
-    required_keys: List[str] = ["url", "method", "scrape"]
+    required_keys: List[str] = ["url", "method", "scrape", "data", "params", "headers"]
     must_have_scrape_data_keys: List[str] = ["html", "json"]
 
     must_have_html_keys: List[str] = ["selector", "id", "name", "class", "tag", "xpath"]

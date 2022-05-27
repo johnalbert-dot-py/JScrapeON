@@ -1,0 +1,39 @@
+{
+    "as_session": true,
+    "proxy": "",
+    "product_url": {
+        "url": "https://webscraper.io/test-sites/e-commerce/allinone",
+        "method": "GET",
+        "headers": {
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36"
+        },
+        "data": {},
+        "params": {},
+        "scrape": {
+            "html": {
+                "selector": "",
+                "id": "",
+                "name": "",
+                "class": "title",
+                "tag": "a",
+                "xpath": "",
+                "count": 0,
+                "get": "text|value|any_attributes"
+            }
+        }
+    },
+    "product_hdds": {
+        "url": "https://webscraper.io/[product_url]/",
+        "method": "GET",
+        "headers": {
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36"
+        },
+        "scrape": {
+            "html": {
+                "xpath": "/html/body/div[1]/div[3]/div/div[2]/div/div/div[2]/div[3]/p",
+                "count": 0,
+                "get": "text"
+            }
+        }
+    }
+}

@@ -157,9 +157,13 @@ class JScrapeONParser(Parser):
     Default parser for JSrapeON.
     """
 
-    session: JScrapeONRequest
     scrape_config: Config
     stored_values: List[Dict] = field(default_factory=list)
+
+    def __post_init__(self):
+        self.session = JScrapeONRequest(
+            is_session=self.scrape_config.config["as_session"]
+        )
 
     def parse(self):
         """

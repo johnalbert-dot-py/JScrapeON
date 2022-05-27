@@ -57,8 +57,13 @@ class Config(ABC):
 class JsonConfig(Config):
 
     debug: bool = False
+    file_name: Optional[str] = None
     config_tester: List[JscrapeOnConfigTest] = field(default_factory=list)
     config: Dict = field(default_factory=dict)
+
+    def __post_init__(self):
+        if self.file_name:
+            self.set_config_file(self.file_name)
 
     def set_config_file(self, file_name):
         json_data = ""
